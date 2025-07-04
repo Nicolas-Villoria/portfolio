@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
+import RootLayout from "../layouts/RootLayout.astro";
+import WarpBackground from "../components/WarpBackground";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<RootLayout title="Nicolas Villoria" description="Portfolio of a Data Scientist">
+	<div class="relative w-screen h-screen">
+		<WarpBackground
+			color1="#09090b"
+			color2="#27272a"
+			color3="#52525b"
+			speed={0.6}
+			swirl={0.5}
+			swirlIterations={10}
+			shapeScale={0.3}
+			client:load
+		/>
+
+		<div class="relative flex flex-col items-center justify-center w-full h-full text-center">
+			<h1 class="text-6xl md:text-[120px] lg:text-[160px] tracking-tighter text-balance text-amber-200" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600;">
+				Nicolas Villoria
+			</h1>
+			<p class="text-lg md:text-2xl lg:text-3xl text-amber-200 mt-4" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 400;">
+				Data Scientist & AI Enthusiast
+			</p>
+		</div>
+
+		<div class="absolute bottom-8 left-8 flex items-center gap-2">
+			<span class="relative flex items-center justify-center size-3">
+        		<span class="absolute inline-flex h-full w-full animate-ping duration-1000 rounded-full bg-amber-200 opacity-75"></span>
+        		<span class="relative inline-flex size-2 rounded-full bg-amber-200"></span>
+      		</span>
+			<p class="text-amber-200">Available For Work</p>
+		</div>
+
+		<div class="absolute bottom-8 right-8 flex items-center gap-3">
+			<a href="/projects" class="px-4 py-2 bg-amber-200 text-black rounded-3xl hover:bg-amber-300 transition-all duration-300 font-medium">
+				Projects
+			</a>
+			<a href="/contact" class="px-4 py-2 border border-amber-200 text-amber-200 rounded-3xl hover:bg-amber-200 hover:text-black transition-all duration-300 font-medium">
+				Contact
+			</a>
+		</div>
+	</div>
+</RootLayout>
+
+
