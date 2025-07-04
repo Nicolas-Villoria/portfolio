@@ -1,6 +1,8 @@
 import { Warp, type WarpProps } from '@paper-design/shaders-react';
 
 export default function WarpBackground(props: WarpProps) {
+	console.log('WarpBackground props:', props); // Debug logging
+	
 	const defaultProps = {
 		speed: 0.4,
 		rotation: 0.5,

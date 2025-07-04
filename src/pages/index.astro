@@ -7,9 +7,7 @@ import WarpBackground from "../components/WarpBackground";
 <RootLayout title="Nicolas Villoria" description="Portfolio of a Data Scientist">
 	<div class="relative w-screen h-screen">
 		<WarpBackground
-			color1="#09090b"
-			color2="#27272a"
-			color3="#52525b"
+			colors={["#09090b", "#27272a", "#52525b"]}
 			speed={0.6}
 			swirl={0.5}
 			swirlIterations={10}
@@ -18,10 +16,10 @@ import WarpBackground from "../components/WarpBackground";
 		/>
 
 		<div class="relative flex flex-col items-center justify-center w-full h-full text-center">
-			<h1 class="text-6xl md:text-[120px] lg:text-[160px] tracking-tighter text-balance text-amber-200" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600;">
+			<h1 class="text-4xl md:text-6xl lg:text-8xl tracking-tighter text-balance text-amber-200" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600;">
 				Nicolas Villoria
 			</h1>
-			<p class="text-lg md:text-2xl lg:text-3xl text-amber-200 mt-4" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 400;">
+			<p class="text-lg md:text-2xl lg:text-2xl text-amber-200 mt-4" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 400;">
 				Data Scientist & AI Enthusiast
 			</p>
 		</div>
@@ -35,7 +33,7 @@ import WarpBackground from "../components/WarpBackground";
 		</div>
 
 		<div class="absolute bottom-8 right-8 flex items-center gap-3">
-			<a href="/projects" class="px-4 py-2 bg-amber-200 text-black rounded-3xl hover:bg-amber-300 transition-all duration-300 font-medium">
+			<a href="/projects" class="px-4 py-2 bg-amber-200 text-black border border-amber-200 rounded-3xl hover:bg-transparent hover:text-amber-200 transition-all duration-300 font-medium">
 				Projects
 			</a>
 			<a href="/contact" class="px-4 py-2 border border-amber-200 text-amber-200 rounded-3xl hover:bg-amber-200 hover:text-black transition-all duration-300 font-medium">
