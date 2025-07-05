@@ -1,0 +1,115 @@
+---
+import InfoLayout from "../layouts/InfoLayout.astro";
+
+const skills = [
+     {
+          category: "Data Science & AI",
+          description: "Expertise in machine learning, statistical analysis, and predictive modeling using Python and R.",
+          technologies: ["Python", "R", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy"]
+     },
+     {
+          category: "Web Development",
+          description: "Full-stack development with modern frameworks and technologies for scalable web applications.",
+          technologies: ["JavaScript", "TypeScript", "React", "Astro", "Node.js", "Tailwind CSS"]
+     },
+     {
+          category: "Data Engineering",
+          description: "Building robust data pipelines and managing large-scale data infrastructure and analytics.",
+          technologies: ["SQL", "PostgreSQL", "MongoDB", "Apache Spark", "Docker", "AWS"]
+     },
+     {
+          category: "Tools & Platforms",
+          description: "Proficient with industry-standard tools for development, deployment, and data visualization.",
+          technologies: ["Git", "Jupyter", "Tableau", "Power BI", "Linux", "Cloud Platforms"]
+     }
+];
+
+const experience = [
+     {
+          title: "Data Scientist",
+          company: "Tech Solutions Inc.",
+          period: "2022 - Present",
+          description: "Lead data science initiatives and develop machine learning models for business optimization."
+     },
+     {
+          title: "ML Engineer",
+          company: "Analytics Pro",
+          period: "2021 - 2022",
+          description: "Implemented ML pipelines and deployed predictive models for client projects."
+     },
+     {
+          title: "Web Developer",
+          company: "Digital Agency",
+          period: "2020 - 2021",
+          description: "Developed responsive web applications and collaborated with design teams."
+     }
+];
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+        <h1 class="text-4xl md:text-6xl lg:text-8xl tracking-tighter text-balance text-white" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 550;">
+				About
+		</h1>
+        
+        <div class="mt-6 max-w-3xl">
+            <p class="text-lg text-zinc-300 mb-6" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 400;">
+                I'm a passionate data scientist and web developer with a love for turning complex data into actionable insights and building beautiful, functional web experiences.
+            </p>
+            <p class="text-base text-zinc-400" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 400;">
+                With a background spanning data science, machine learning, and full-stack development, I bridge the gap between technical analysis and user-facing solutions. I enjoy working on projects that combine analytical rigor with creative problem-solving.
+            </p>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-2xl md:text-3xl text-white mb-6" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600;">
+                Skills & Expertise
+            </h2>
+            <ul class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {skills.map((skill) => (
+                    <li class="p-6 bg-zinc-900/50 rounded-lg border border-zinc-800">
+                        <h3 class="text-xl text-zinc-100 mb-3" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600;">
+                            {skill.category}
+                        </h3>
+                        <p class="text-zinc-400 mb-4 text-balance" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 400;">
+                            {skill.description}
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            {skill.technologies.map((tech) => (
+                                <span class="px-3 py-1 bg-amber-200/10 text-amber-200 rounded-full text-sm border border-amber-200/20">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-2xl md:text-3xl text-white mb-6" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600;">
+                Experience
+            </h2>
+            <ul class="space-y-6">
+                {experience.map((job) => (
+                    <li class="p-6 bg-zinc-900/30 rounded-lg border border-zinc-800">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                            <h3 class="text-xl text-zinc-100" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600;">
+                                {job.title}
+                            </h3>
+                            <span class="text-amber-200 text-sm" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 500;">
+                                {job.period}
+                            </span>
+                        </div>
+                        <p class="text-zinc-300 mb-2" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 500;">
+                            {job.company}
+                        </p>
+                        <p class="text-zinc-400 text-balance" style="font-family: -apple-system, 'SF Pro Display', 'San Francisco', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 400;">
+                            {job.description}
+                        </p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+     </div>
+</InfoLayout>
